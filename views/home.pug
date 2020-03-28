@@ -1,0 +1,19 @@
+extends ./layouts/common
+block content   
+    form(class ="d-flex pt-5 pb-5" action="/" method='GET')
+        input(value = `${countryName}` name="countryName" class="form-control mr-2" placeholder="Type Country Name")
+        button(class="btn btn-primary") Search
+    table.table.table-hover
+        thead  
+            tr 
+                th(scope="col") Country Name
+                th(scope="col") New Cases
+                th(scope="col") Total Cases
+                th(scope="col") Deaths
+        tbody
+            each data in datas
+                tr
+                    td=data.country
+                    td=data.todayCases
+                    td=data.cases
+                    td=data.deaths
