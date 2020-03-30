@@ -1,0 +1,10 @@
+extends ./layouts/common
+block footer   
+    .fixed-bottom
+        table.table.table-hover
+        thead  
+            tr 
+                th(scope="col") "All"
+                th(scope="col")= sum.todayCases
+                th(scope="col")= sum.cases
+                th(scope="col")= sum.deaths
