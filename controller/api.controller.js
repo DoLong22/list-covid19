@@ -6,7 +6,6 @@ let sum;
 axios(URL).then(res => {
     datas0 = Module.sortData(res.data);
     sum = Module.calculatorTotal(datas0)
-    console.log(sum)
 }).catch(error => {
     console.log(error);
     console.log("Loi roi");
